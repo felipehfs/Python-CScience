@@ -1,5 +1,8 @@
+# Percorre a lista e devolve o seu tamanho
+
 def count(lista):
-    if lista:
+	""" Conta o tamanho de uma lista recursivamente """    
+	if lista:
         return 1 + count(lista[1:])
     return 0
 

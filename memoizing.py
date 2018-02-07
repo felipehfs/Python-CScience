@@ -1,4 +1,7 @@
+# Utilizando memoizing e alguns conceitos de dynamic programming
+
 def fib(n, memo):
+	''' Função que calcula o fibonacci utilizando memoizing como cache'''
 	if n <= 0:
 		return 0
 	if n == 1:
@@ -8,8 +11,9 @@ def fib(n, memo):
 	return memo[n]
 
 def fat(n, cache):
+	''' Função que retorna o fatorial desejado'''
 	if n < 0:
-		raise ValueError("Impossível calcular o fat de número negativo")
+		raise ValueError("Impossível calcular o fatorial de número negativo")
 	if n == 1 or n == 0:
 		return 1
 	elif not n in cache:

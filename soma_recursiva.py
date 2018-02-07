@@ -1,6 +1,6 @@
 # Função efetua a soma recursiva dos elementos do array
 def soma(lista):
-	""" Soma recursiva """
+	""" Soma recursiva dos elementos da lista"""
 	if len(lista) == 0:
 		return 0
 	else:

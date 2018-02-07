@@ -1,5 +1,7 @@
-class Node:
+# Uma simples lista encadeada
 
+class Node:
+	""" Node class representa o menor atomo da lista"""
 	def __init__(self, node=None):
 		self.head = node
 		self.next = None
@@ -17,6 +19,7 @@ class Node:
 		return self.next
 
 class List(object):
+	""" A Classe List implementa a lista encadeada """
 	def __init__(self):
 		self.head = None
 		self.tail = None
@@ -24,6 +27,7 @@ class List(object):
 
 	def add(self, v):
 		new_node = Node(v)
+		# Se a cauda existir
 		if self.tail:
 			self.tail.set_next(new_node)
 			self.tail = new_node
@@ -33,8 +37,10 @@ class List(object):
 		self.size += 1
 
 	def remove(self, d):
+		""" Remove algum elemento se estiver na lista"""
 		previous = None
 		current = self.head
+		# Percorre a lista em busca do elemento
 		while current:
 			if current.get_value() == d:
 				if previous:
@@ -43,10 +49,12 @@ class List(object):
 					self.head = current.get_next()
 				self.size -= 1
 				return True
+
 			previous = current
 			current = current.get_next()
 
 	def to_list(self):
+		""" Retorna um generator com todos os valores """
 		current = self.head
 		while current:
 			yield current.get_value()

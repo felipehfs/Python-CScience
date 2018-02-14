@@ -1,3 +1,6 @@
+# Algoritmo - Binary Search
+# 2018 -Felipe Henrique
+
 def busca_binaria(lista, busca):
 	""" 
 		Busca binária tem uma complexidade de algoritmo O(log n)
@@ -15,5 +18,3 @@ def busca_binaria(lista, busca):
 				fim = meio - 1
 	return None
 
-a = [1, 2, 3, 5, 6]
-print(busca_binaria(a, 6))

@@ -20,7 +20,7 @@ class Node:
         if self.left:
             self.left.travesing_inorder()
 
-        print(self.value)
+        yield self.value
 
         if self.right:
             self.right.travesing_inorder()
@@ -35,13 +35,8 @@ class Tree:
             self.root = Node(value)
     def display(self):
         if self.root:
-            self.root.travesing_inorder()
+            return self.root.travesing_inorder()
         else:
             print("Não existem elementos")
 
-tree = Tree()
-tree.insert(32)
-tree.insert(16)
-tree.insert(8)
-tree.display()
 

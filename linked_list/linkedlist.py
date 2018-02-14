@@ -35,6 +35,7 @@ class List(object):
 			self.tail = new_node
 			self.head = new_node
 		self.size += 1
+		return True
 
 	def remove(self, d):
 		""" Remove algum elemento se estiver na lista"""
@@ -59,12 +60,3 @@ class List(object):
 		while current:
 			yield current.get_value()
 			current = current.get_next()
-		
-c = List()
-c.add(40)
-c.add(54)
-c.add(32)
-
-
-for item in c.to_list():
-	print(item)
